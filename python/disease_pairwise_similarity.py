@@ -378,10 +378,11 @@ if __name__ == '__main__':
 
 
     # Subsample data (for testing)
-    subsample_data = {k:dis_to_hp[k] for k in list(dis_to_hp.keys())[0:25]}
+    ##subsample_data = {k:dis_to_hp[k] for k in list(dis_to_hp.keys())[0:25]}
+    ##comp_args, labs = generate_pairwise_comparison_args(subsample_data)
 
-    comp_args, labs = generate_pairwise_comparison_args(subsample_data)
-    #comp_args, labs = generate_pairwise_comparison_args(dis_to_hp)
+    # Generate pairwise comparison arguments (full dataset)
+    comp_args, labs = generate_pairwise_comparison_args(dis_to_hp)
 
     # Divide workload for parallel processing
     div_args = divide_workload(comp_args, num_proc=args.num_proc)
