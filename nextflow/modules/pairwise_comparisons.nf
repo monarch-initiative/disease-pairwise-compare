@@ -15,7 +15,7 @@ process compute_pairwise_comps {
     script:
     """
     source ${env_dir}/.venv/bin/activate
-    python pairwise-disease-compare/python/disease_pairwise_similarity.py -p ./disease-comparisons \
+    python disease-pairwise-compare/python/disease_pairwise_similarity.py -p ./disease-comparisons \
                                                                                   -c ${task.cpus} \
     """
 }

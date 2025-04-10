@@ -16,7 +16,7 @@ process cluster_and_plot {
     script:
     """
     source ${env_dir}/.venv/bin/activate
-    python pairwise-disease-compare/python/disease_cluster_and_plot.py -p ./disease-comparisons \
+    python disease-pairwise-compare/python/disease_cluster_and_plot.py -p ./disease-comparisons \
                                                                                   -m ${sim_metric} \
     """
 }
